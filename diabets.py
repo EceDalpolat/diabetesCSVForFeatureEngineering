@@ -104,11 +104,11 @@ for col in num_cols:
 
 for col in cat_cols:
     print(f"{col} değişkenine göre {"Outcome"} ortalaması:")
-    print(df.groupby(col)["Outcome"].mean(), "\n")
+    print(df.groupby("Outcome")[col].mean(), "\n")
 
 for col in num_cols:
     print(f"{col} değişkenine göre {"Outcome"} ortalaması:")
-    print(df.groupby(col)["Outcome"].mean(), "\n")
+    print(df.groupby("Outcome")[col].mean(), "\n")
 
 
 # Eksik gözlem sayısını bulalım
